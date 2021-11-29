@@ -8,15 +8,15 @@
     </head>
 
     <body>
-        <div>
+        <div class="result">
             <% if(correct) { %>
                 <p>Congrats! your answer was correct!</p>
             <% } else { %>
                 <p>Your answer was wrong. The correct answer was "<%= correctAnswer %>"</p>
             <% } %>
+            <form action="/" method="get">
+                <input type="submit" value="Next Question">
+            </form>
         </div>
-        <form action="/" method="get">
-            <input type="submit">
-        </form>
     </body>
 </html>

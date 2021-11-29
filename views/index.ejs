@@ -9,20 +9,22 @@
 
     <body>
         <div>
-            <%= question %>
-        </div>
-        <div>
-            <form action="/check_answer" method="post">
-                <%for(var answer of answers) {%>
-                    <div>
-                        <input type="radio" id="<%= answer %>" name="answer" value="<%= answer %>"/>
-                        <label for="<%= answer %>">
-                            <%= answer %>    
-                        </label>
-                    </div>
-                <% } %>
-                <input type="submit">
-            </form>
+            <div id="question">
+                <%= question %>
+            </div>
+            <div id="answers">
+                <form action="/check_answer" method="post">
+                    <%for(var answer of answers) {%>
+                        <div class="answer">
+                            <input type="radio" id="<%= answer %>" name="answer" value="<%= answer %>"/>
+                            <label for="<%= answer %>">
+                                <%= answer %>    
+                            </label>
+                        </div>
+                    <% } %>
+                    <input type="submit" value="Submit Answer">
+                </form>
+            </div>
         </div>
     </body>
 </html>
