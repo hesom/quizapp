@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <head>
+            <meta name="viewport" content="width=device-width"/>
+            <link rel="stylesheet" href="css/style.css"/>
+    </head>
+
+    <body>
+        <div>
+            <% if(correct) { %>
+                <p>Congrats! your answer was correct!</p>
+            <% } else { %>
+                <p>Your answer was wrong. The correct answer was "<%= correctAnswer %>"</p>
+            <% } %>
+        </div>
+        <form action="/" method="get">
+            <input type="submit">
+        </form>
+    </body>
+</html>

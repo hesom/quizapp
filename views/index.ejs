@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width"/>
+        <link rel="stylesheet" href="css/style.css"/>
+
+        <title>Quiz</title>
+    </head>
+
+    <body>
+        <div>
+            <%= question %>
+        </div>
+        <div>
+            <form action="/check_answer" method="post">
+                <%for(var answer of answers) {%>
+                    <div>
+                        <input type="radio" id="<%= answer %>" name="answer" value="<%= answer %>"/>
+                        <label for="<%= answer %>">
+                            <%= answer %>    
+                        </label>
+                    </div>
+                <% } %>
+                <input type="submit">
+            </form>
+        </div>
+    </body>
+</html>
