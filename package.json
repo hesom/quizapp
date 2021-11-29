@@ -4,7 +4,7 @@
   "description": "Web app for random trivia questions",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "nodemon -L",
     "test": "test"
   },
   "repository": {
