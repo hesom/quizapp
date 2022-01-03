@@ -9,13 +9,11 @@
 
     <body>
         <div class="container">
-            <div></div>
-            <div id="question" class="grid-center">
+            <div id="question">
                 <%= question %>
             </div>
-            <div></div>
-            <div></div>
-            <div id="answers" class="grid-center">
+            <hr>
+            <div id="answers">
                 <form action="/check_answer" method="post">
                     <%for(var answer of answers) {%>
                         <div class="answer">
@@ -28,7 +26,6 @@
                     <input type="submit" value="Submit Answer">
                 </form>
             </div>
-            <div></div>
         </div>
     </body>
 </html>
