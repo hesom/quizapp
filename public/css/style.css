@@ -1,23 +1,22 @@
 body {
-    background: #3c3c3c;
     font-family: 'Open Sans', sans-serif;
+    background-color: #111;
     font-size: 14px;
     color: #ccc;
     line-height: 1.5;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    background: #3c3c3c;
+    padding: 50px;
+    border: 5px solid black;
+    border-radius: 10px;
+    width: 800px;
+    margin:auto;
 }
 
 #question {
     margin: 20px;
     border: 2px solid red;
     border-radius: 10px;
-    text-align: center;
-}
-
-.grid-center {
-    grid-column: 2/3;
 }
