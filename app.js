@@ -31,7 +31,7 @@ app.get('/', async (req, res) => {
     if(!req.session.init || req.session.nextQuestion){
         req.session.init = true
         req.session.nextQuestion = false;
-        let quizData = await axios.get("https://opentdb.com/api.php?amount=1");
+        let quizData = await axios.get("https://opentdb.com/api.php?amount=1&difficulty=easy");
 
         quizData = quizData.data.results;
         let answers = [];
