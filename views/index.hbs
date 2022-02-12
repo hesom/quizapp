@@ -7,8 +7,8 @@
         <form action="/check_answer" method="post">
             {{#each answers}}
                 <div class="answer">
-                    <input type="radio" id="<%= answer %>" name="answer" value="<%= answer %>"/>
-                    <label for="<%= answer %>">
+                    <input type="radio" id="{{this}}" name="answer" value="{{this}}"/>
+                    <label for="{{this}}">
                         {{this}}
                     </label>
                 </div>
