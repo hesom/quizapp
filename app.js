@@ -1,13 +1,16 @@
 const session = require("express-session");
 const express = require("express");
+const exphbs = require('express-handlebars');
 const he = require("he");
 const path = require("path");
 const axios = require("axios");
 const app = express();
 const port = 8080;
 
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'))
+const hbs = exphbs.create({ defaultLayout: 'main', extname: '.hbs' })
+
+app.engine('hbs', hbs.engine)
+app.set('view engine', 'hbs');
 
 app.use(express.static('public'));
 app.use(express.json());
